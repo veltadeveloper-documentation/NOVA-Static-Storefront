@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA is a frontend-only premium store concept built as a polished static preview.">
+  <title>NØVA | Premium Storefront Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="site-background" aria-hidden="true">
+    <div class="site-background__glow site-background__glow--one"></div>
+    <div class="site-background__glow site-background__glow--two"></div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="NOVA home">
+        <span class="brand__mark">
+          <span class="iconify" data-icon="mdi:lightning-bolt"></span>
+        </span>
+        <span class="brand__wordmark">NØVA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__link" href="#categories" data-nav-link>Categories</a>
+        <a class="site-nav__link" href="#products" data-nav-link>Products</a>
+        <a class="site-nav__link" href="#story" data-nav-link>Story</a>
+        <a class="site-nav__link" href="#arrivals" data-nav-link>Arrivals</a>
+        <a class="site-nav__link" href="#reviews" data-nav-link>Reviews</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="icon-button icon-button--ghost desktop-only" type="button" data-toast="Search is part of the full experience.">
+          <span class="iconify" data-icon="mdi:magnify"></span>
+          <span class="sr-only">Search</span>
+        </button>
+        <button class="icon-button icon-button--ghost desktop-only" type="button" data-toast="Account pages can be added later.">
+          <span class="iconify" data-icon="mdi:account-outline"></span>
+          <span class="sr-only">Account</span>
+        </button>
+        <button class="icon-button" type="button" data-cart-trigger>
+          <span class="iconify" data-icon="mdi:shopping-outline"></span>
+          <span class="cart-badge" data-cart-count>0</span>
+          <span class="sr-only">Open cart preview</span>
+        </button>
+        <button class="menu-toggle mobile-only" type="button" data-menu-open aria-controls="mobile-menu" aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__backdrop" type="button" data-menu-close tabindex="-1" aria-label="Close menu"></button>
+    <aside class="mobile-menu__panel">
+      <div class="mobile-menu__top">
+        <span class="brand__wordmark">NØVA</span>
+        <button class="icon-button" type="button" data-menu-close>
+          <span class="iconify" data-icon="mdi:close"></span>
+          <span class="sr-only">Close menu</span>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav" aria-label="Mobile">
+        <a href="#categories" data-nav-link data-mobile-link>Categories</a>
+        <a href="#products" data-nav-link data-mobile-link>Products</a>
+        <a href="#story" data-nav-link data-mobile-link>Story</a>
+        <a href="#arrivals" data-nav-link data-mobile-link>Arrivals</a>
+        <a href="#reviews" data-nav-link data-mobile-link>Reviews</a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <p>Frontend concept Preview</p>
+        <a class="button button--ghost button--full" href="#newsletter" data-mobile-link>Join the list</a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="main-content">
+    <section class="section hero-section" id="top">
+      <div class="container hero">
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow">Frontend concept • Preview</p>
+          <h1 class="hero__title">Redefine your wardrobe with an editorial storefront that feels launch-ready.</h1>
+          <p class="hero__copy">
+            NØVA blends premium visuals, structured product storytelling, and lightweight interactivity to create a polished ecommerce preview without backend dependencies.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="#products">
+              Shop the edit
+              <span class="iconify" data-icon="mdi:arrow-right"></span>
+            </a>
+            <a class="button button--ghost" href="#story">Discover the concept</a>
+          </div>
+          <ul class="hero__metrics">
+            <li>
+              <strong>24</strong>
+              <span>signature silhouettes</span>
+            </li>
+            <li>
+              <strong>98%</strong>
+              <span>natural and recycled fibers</span>
+            </li>
+            <li>
+              <strong>03</strong>
+              <span>curated seasonal drops</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <article class="editorial-card">
+            <img src="https://picsum.photos/seed/nova-hero-coat/900/1100" alt="Model wearing a structured wool coat" loading="eager" decoding="async">
+            <div class="editorial-card__overlay"></div>
+            <div class="editorial-card__content">
+              <p class="editorial-card__eyebrow">Volume 05</p>
+              <h2>Sharper layers for cooler nights and slower mornings.</h2>
+              <p>Refined tailoring, textured knits, and understated essentials built around movement.</p>
+            </div>
+          </article>
+
+          <div class="hero__stack">
+            <article class="mini-card">
+              <img src="https://picsum.photos/seed/nova-hero-knit/500/500" alt="Folded knitwear and essentials on a bench" loading="lazy" decoding="async">
+              <div class="mini-card__content">
+                <span>New arrival</span>
+                <strong>Textured knit set</strong>
+              </div>
+            </article>
+            <article class="mini-card mini-card--text">
+              <p class="eyebrow eyebrow--soft">Studio note</p>
+              <h3>Built as a static preview, designed like a premium launch.</h3>
+              <p>This version keeps the experience frontend-only while leaving room for checkout, CMS, or headless integrations later.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Store highlights">
+      <div class="ticker__track">
+        <span>Free shipping over $100</span>
+        <span>Premium quality</span>
+        <span>Static demo interactions</span>
+        <span>Editorial layout</span>
+        <span>Preview</span>
+        <span>Free shipping over $100</span>
+        <span>Premium quality</span>
+        <span>Static demo interactions</span>
+        <span>Editorial layout</span>
+        <span>Code or WordPress Template</span>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2 class="section-heading__title">Shop by category</h2>
+          </div>
+          <p class="section-heading__copy">
+            Three directions, one cohesive wardrobe. Each category is curated to keep the browsing experience focused and elevated.
+          </p>
+        </div>
+        <div class="category-grid" data-category-grid></div>
+      </div>
+    </section>
+
+    <section class="section section--products" id="products">
+      <div class="container">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Curated edit</p>
+            <h2 class="section-heading__title">Featured products</h2>
+          </div>
+          <p class="section-heading__copy">
+            A cleaner frontend architecture now drives the product cards, filters, and micro-interactions, making this page much easier to extend.
+          </p>
+        </div>
+
+        <div class="filter-row" role="toolbar" aria-label="Product categories">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="tops" aria-pressed="false">Tops</button>
+          <button class="filter-chip" type="button" data-filter="bottoms" aria-pressed="false">Bottoms</button>
+          <button class="filter-chip" type="button" data-filter="layer" aria-pressed="false">Layers</button>
+          <button class="filter-chip" type="button" data-filter="accessories" aria-pressed="false">Accessories</button>
+        </div>
+
+        <div class="product-grid" data-product-grid></div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container story-layout">
+        <article class="story-panel" data-reveal>
+          <p class="eyebrow">Why this refactor works</p>
+          <h2 class="section-heading__title">A stronger brand preview, minus the backend complexity.</h2>
+          <p class="story-panel__copy">
+            The experience now lives in a clearer static-site structure with separate styles, content data, and behavior. 
+          </p>
+          <div class="story-highlights">
+            <article class="stat-card">
+              <strong>03</strong>
+              <span>separate frontend files for structure, styling, and interactivity</span>
+            </article>
+            <article class="stat-card">
+              <strong>100%</strong>
+              <span>client-side demo behavior with no backend dependency</span>
+            </article>
+            <article class="stat-card">
+              <strong>Ready</strong>
+              <span>to evolve into a larger storefront or portfolio case study later</span>
+            </article>
+          </div>
+        </article>
+
+        <div class="service-grid" data-reveal>
+          <article class="service-card">
+            <span class="service-card__icon iconify" data-icon="mdi:truck-delivery-outline"></span>
+            <h3>Fast shipping cues</h3>
+            <p>Trust-building store details still feel real, even inside a static concept build.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon iconify" data-icon="mdi:refresh"></span>
+            <h3>Easy preview flows</h3>
+            <p>Cart, search, and subscription actions stay lightweight through clear frontend-only feedback.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon iconify" data-icon="mdi:shield-check-outline"></span>
+            <h3>Confident presentation</h3>
+            <p>A more intentional layout helps the site look less like a prototype and more like a launch draft.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon iconify" data-icon="mdi:leaf"></span>
+            <h3>Softer materials story</h3>
+            <p>Brand language and visual hierarchy now support the sustainable, premium tone more clearly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arrivals">
+      <div class="container">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Latest drop</p>
+            <h2 class="section-heading__title">New arrivals</h2>
+          </div>
+          <p class="section-heading__copy">
+            A second merchandising block gives the page more rhythm and helps the preview feel closer to a complete brand destination.
+          </p>
+        </div>
+
+        <div class="arrival-layout">
+          <article class="arrival-callout" data-reveal>
+            <p class="eyebrow eyebrow--soft">Studio selection</p>
+            <h3>Pieces designed to layer across seasons without losing their edge.</h3>
+            <p>
+              From lightweight outer layers to compact accessories, the newest drop leans into tactile finishes, soft neutrals, and sharper silhouettes.
+            </p>
+            <a class="inline-link" href="#newsletter">
+              Get early access
+              <span class="iconify" data-icon="mdi:arrow-top-right"></span>
+            </a>
+          </article>
+          <div class="arrival-grid" data-arrival-grid></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Testimonials</p>
+            <h2 class="section-heading__title">What customers say</h2>
+          </div>
+          <p class="section-heading__copy">
+            Social proof keeps the concept grounded and helps the page feel more complete, even as a static showcase.
+          </p>
+        </div>
+        <div class="review-grid" data-testimonial-grid></div>
+      </div>
+    </section>
+
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="newsletter" data-reveal>
+          <div class="newsletter__copy">
+            <p class="eyebrow">Stay in the loop</p>
+            <h2 class="section-heading__title">Bring visitors back for the next drop.</h2>
+            <p>
+              This signup is intentionally frontend-only for now, but the layout is ready for a real email integration whenever you want it.
+            </p>
+            <p class="newsletter__note">No backend logic here yet. This action simply confirms the static preview flow.</p>
+          </div>
+
+          <form class="newsletter__form" data-newsletter-form>
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required>
+            <button class="button" type="submit">
+              Subscribe
+              <span class="iconify" data-icon="mdi:arrow-right"></span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <a class="brand brand--footer" href="#top">
+          <span class="brand__mark">
+            <span class="iconify" data-icon="mdi:lightning-bolt"></span>
+          </span>
+          <span class="brand__wordmark">NØVA</span>
+        </a>
+        <p class="site-footer__intro">
+          Premium essentials for the modern minimalist, rebuilt as a cleaner frontend project for static hosting and easy iteration.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="site-footer__title">Shop</h3>
+        <ul class="site-footer__links">
+          <li><a href="#products">Featured products</a></li>
+          <li><a href="#arrivals">New arrivals</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="site-footer__title">Project</h3>
+        <ul class="site-footer__links">
+          <li><a href="#story">Frontend structure</a></li>
+          <li><a href="#newsletter">Email preview</a></li>
+          <li><button type="button" data-toast="A real checkout can be connected later.">Checkout roadmap</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="site-footer__title">Follow</h3>
+        <div class="social-row">
+          <button class="icon-button icon-button--ghost" type="button" data-toast="Instagram link placeholder">
+            <span class="iconify" data-icon="mdi:instagram"></span>
+            <span class="sr-only">Instagram</span>
+          </button>
+          <button class="icon-button icon-button--ghost" type="button" data-toast="Pinterest link placeholder">
+            <span class="iconify" data-icon="mdi:pinterest"></span>
+            <span class="sr-only">Pinterest</span>
+          </button>
+          <button class="icon-button icon-button--ghost" type="button" data-toast="YouTube link placeholder">
+            <span class="iconify" data-icon="mdi:youtube"></span>
+            <span class="sr-only">YouTube</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <span>© <span data-current-year></span> NØVA. Frontend concept preview.</span>
+      <span>Static hosting Preview - Full Version on our store.</span>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast-box role="status" aria-live="polite" aria-atomic="true">
+    <span class="iconify toast__icon" data-icon="mdi:check-circle"></span>
+    <span data-toast-message>Preview action completed.</span>
+  </div>
+</body>
+</html>
